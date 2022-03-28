@@ -4,7 +4,11 @@
 
 
     
-    let alimetos = ["pollo","cerdo","pavo","res","pescado","lechuga","zanahoria","manzana","uvas","grillos","mariposas","cucarachas","gusanos"]
+    let carnivoros = ["pollo","cerdo","pavo","res","pescado"]
+
+    let insectos = ["mariposas","grillos","gusanos"]
+
+    let vegetales = ["lechuga","zanahoria","manzana","uvas"]
     
     let alimentosVegetales = []
 
@@ -12,19 +16,23 @@
        
         
         let alimentoVegetal ={}
-
-        alimentoVegetal.nombre =alimetos[Math.floor(Math.random() * alimetos.length)]
+        let alimentoInsectos={}
+        let alimentoCarne={}
+        alimentoVegetal.nombre =vegetales [Math.floor(Math.random() * vegetales.length)]
+        alimentoInsectos.nombre =insectos [Math.floor(Math.random() * insectos.length)]
+        alimentoCarne.nombre =carnivoros [Math.floor(Math.random() * carnivoros.length)]
         alimentoVegetal.calorias = Math.floor(Math.random() * (500 - 100) + 100 )
         
-        alimentosVegetales.push(alimentoVegetal)
+        alimentosVegetales.push(alimentoVegetal,alimentoInsectos,alimentoCarne)
+        
     }
-    // console.log(alimentosVegetales)
+     console.log(alimentosVegetales)
 
 function clasificarDieta (alimentosVegetales, callback){
 
     setTimeout(()=>{
        let totalvegetales = alimentosVegetales.filter((vegetales)=>{
-            return(vegetales.nombre ===('lechuga','manzana','uvas') && vegetales.calorias >= 200)
+            return(vegetales.nombre == "lechuga","zanahoria","manzana","uvas" && vegetales.calorias >= 200)
 
         })
         callback(totalvegetales)
@@ -40,3 +48,7 @@ clasificarDieta(alimentosVegetales,function (totalvegetales){
     console.log(totalvegetales)
     console.log("El total de calorias que debe de consumir es de: "+sumaCalorias)
 })
+
+
+
+
