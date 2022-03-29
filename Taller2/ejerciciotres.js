@@ -18,6 +18,7 @@
         let alimentoVegetal ={}
         let alimentoInsectos={}
         let alimentoCarne={}
+
         alimentoVegetal.nombre =vegetales [Math.floor(Math.random() * vegetales.length)]
         alimentoInsectos.nombre =insectos [Math.floor(Math.random() * insectos.length)]
         alimentoCarne.nombre =carnivoros [Math.floor(Math.random() * carnivoros.length)]
@@ -26,7 +27,7 @@
         alimentosVegetales.push(alimentoVegetal,alimentoInsectos,alimentoCarne)
         
     }
-     console.log(alimentosVegetales)
+     //console.log(alimentosVegetales)
 
 function clasificarDieta (alimentosVegetales, callback){
 
@@ -36,7 +37,7 @@ function clasificarDieta (alimentosVegetales, callback){
 
         })
         callback(totalvegetales)
-    },2000)
+    },5000)
     
 }
 
@@ -46,7 +47,7 @@ clasificarDieta(alimentosVegetales,function (totalvegetales){
         sumaCalorias = sumaCalorias + finalvegetal.calorias
     })
     console.log(totalvegetales)
-    console.log("El total de calorias que debe de consumir es de: "+sumaCalorias)
+    console.log("La suma de energia que debe de consumir Grogu es de: "+sumaCalorias)
 })
 
 

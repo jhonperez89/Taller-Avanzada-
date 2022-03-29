@@ -11,9 +11,9 @@ function encontarPlanos (callback){
 
 encontarPlanos(function(plano){
     if(plano <= 10){
-        console.log("NO te puedes llevar el plano, el numero de plano es: " + plano + " tienes que devolverte")
-    }else{
         console.log("La nave ha despegado con el plano " + plano + ", buen viaje ")
+    }else{
+        console.log("NO te puedes llevar el plano, el numero de plano es: " + plano + " tienes que devolverte")
     }
 })
 
